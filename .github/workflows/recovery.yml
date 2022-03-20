@@ -13,10 +13,10 @@ on:
   workflow_dispatch:
 
 env:
-  MANIFEST: https://github.com/minimal-manifest-twrp/platform_manifest_twrp_omni -b twrp-10.0-deprecated
-  DEVICE: KD7
-  DT_LINK: https://github.com/mastersenpai0405/recovery_device_tecno_KD7
-  DT_PATH: device/tecno/KD7
+  MANIFEST: git://github.com/minimal-manifest-twrp/platform_manifest_twrp_aosp.git -b twrp-11
+  DEVICE: a22x
+  DT_LINK: https://github.com/deader89/galaxy-A22-4g-twrp-Tree
+  DT_PATH: device/samsung/a22x
   TARGET: recoveryimage
   TZ: Asia/manila
 
