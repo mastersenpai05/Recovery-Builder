@@ -15,7 +15,7 @@ on:
 env:
   MANIFEST: https://github.com/minimal-manifest-twrp/platform_manifest_twrp_omni -b twrp-10.0-deprecated
   DEVICE: AcerOne8T482L
-  DT_LINK: https://github.com/twrpdtgen/android_device_acer_AcerOne8T482L -b android-10.0
+  DT_LINK: https://github.com/twrpdtgen/android_device_acer_AcerOne8T482L
   DT_PATH: device/acer/AcerOne8T482L
   TARGET: recoveryimage
   TZ: Asia/Kolkata
