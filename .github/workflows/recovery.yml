@@ -17,7 +17,7 @@ env:
   DEVICE: AcerOne8T482L
   DT_LINK: https://github.com/twrpdtgen/android_device_acer_AcerOne8T482L
   DT_PATH: device/acer/AcerOne8T482L
-  TARGET: recoveryimage
+  TARGET: recovery
   TZ: Asia/Kolkata
 
 jobs:
