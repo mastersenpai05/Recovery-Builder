@@ -13,11 +13,11 @@ on:
   workflow_dispatch:
 
 env:
-  MANIFEST: https://github.com/minimal-manifest-twrp/platform_manifest_twrp_omni -b twrp-10.0-deprecated
+  MANIFEST: https://github.com/PhilZ-cwm6/philz_touch_cwm6 bootable/recovery-philz -b cm-11.0
   DEVICE: AcerOne8T482L
   DT_LINK: https://github.com/twrpdtgen/android_device_acer_AcerOne8T482L
   DT_PATH: device/acer/AcerOne8T482L
-  TARGET: recovery
+  TARGET: recoveryimage
   TZ: Asia/Kolkata
 
 jobs:
@@ -67,7 +67,7 @@ jobs:
          env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
          with:
-          tag_name: TWRP_10.0
+          tag_name: TWRP_10.1
           name: TWRP-AcerOne8T482L
           files: | 
             work/out/target/product/AcerOne8T482L/recovery.img
