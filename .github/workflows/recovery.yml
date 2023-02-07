@@ -13,8 +13,8 @@ on:
   workflow_dispatch:
 
 env:
-  MANIFEST: https://github.com/SHRP/manifest.git
-  MANIFEST_BRANCH: v3_10.0
+  MANIFEST: https://github.com/minimal-manifest-twrp/platform_manifest_twrp_omni
+  MANIFEST_BRANCH: twrp-10.0-deprecated
   DEVICE: AcerOne8T482L
   DT_LINK: https://github.com/twrpdtgen/android_device_acer_AcerOne8T482L
   DT_PATH: device/acer/AcerOne8T482L
@@ -68,7 +68,7 @@ jobs:
          env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
          with:
-          tag_name: TWRP_10.3
+          tag_name: TWRP_10.4
           name: TWRP-AcerOne8T482L
           files: | 
             work/out/target/product/AcerOne8T482L/recovery.img
