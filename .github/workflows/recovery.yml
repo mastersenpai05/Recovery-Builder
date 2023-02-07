@@ -13,8 +13,8 @@ on:
   workflow_dispatch:
 
 env:
-  MANIFEST: https://github.com/minimal-manifest-twrp/platform_manifest_twrp_aosp.git
-  MANIFEST_BRANCH: twrp-11
+  MANIFEST: https://github.com/SHRP/platform_manifest_twrp_omni/tree/v3_9.0
+  MANIFEST_BRANCH: v3_9.0
   DEVICE: AcerOne8T482L
   DT_LINK: https://github.com/twrpdtgen/android_device_acer_AcerOne8T482L
   DT_PATH: device/acer/AcerOne8T482L
