@@ -71,5 +71,5 @@ jobs:
           tag_name: TWRP_11
           name: TWRP-AcerOne8T482L
           files: | 
-            work/out/target/product/AcerOne8T482L/recovery.img
+            work/out/target/product/T482L/recovery.img
 
