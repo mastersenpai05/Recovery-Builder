@@ -13,11 +13,11 @@ on:
   workflow_dispatch:
 
 env:
-  MANIFEST: https://github.com/minimal-manifest-twrp/platform_manifest_twrp_omni -b twrp-10.0-deprecated
-  DEVICE: KD7
-  DT_LINK: https://github.com/mastersenpai0405/recovery_device_tecno_KD7
-  DT_PATH: device/tecno/KD7
-  TARGET: recoveryimage
+  MANIFEST: git://github.com/SKYHAWK-Recovery-Project/platform_manifest_twrp_omni.git -b shrp-12.1
+  DEVICE: RMX3360
+  DT_LINK: https://github.com/vherawidatama/recovery_device_realme_RMX3360.git -b backup_twrp_12
+  DT_PATH: device/realme/RMX3360
+  TARGET: bootimage
   TZ: Asia/manila
 
 jobs:
@@ -62,7 +62,7 @@ jobs:
          env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
          with:
-          tag_name: TWRP_10.0
-          name: TWRP-KD7
+          tag_name: TWRP_SHRP_12.1
+          name: TWRP-RMX3360
           files: | 
-            work/out/target/product/KD7/recovery.img
+            work/out/target/product/RMX3360/recovery.img
