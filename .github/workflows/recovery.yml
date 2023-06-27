@@ -14,9 +14,9 @@ on:
 
 env:
   MANIFEST: https://github.com/minimal-manifest-twrp/platform_manifest_twrp_omni -b twrp-10.0-deprecated
-  DEVICE: KD7
-  DT_LINK: https://github.com/mastersenpai0405/recovery_device_tecno_KD7
-  DT_PATH: device/tecno/KD7
+  DEVICE: Infinix-X663
+  DT_LINK: https://github.com/twrpdtgen/android_device_infinix_Infinix-X663/tree/vnd_x663_h6915-user-11-RP1A.200720.011-245674-release-keys
+  DT_PATH: device/infinix/Infinix-X663
   TARGET: recoveryimage
   TZ: Asia/manila
 
@@ -63,6 +63,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
          with:
           tag_name: TWRP_10.0
-          name: TWRP-KD7
+          name: TWRP-Infinix-X663
           files: | 
-            work/out/target/product/KD7/recovery.img
+            work/out/target/product/Infinix-X663/recovery.img
