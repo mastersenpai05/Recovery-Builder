@@ -13,12 +13,12 @@ on:
   workflow_dispatch:
 
 env:
-  MANIFEST: https://github.com/minimal-manifest-twrp/platform_manifest_twrp_omni -b twrp-10.0-deprecated
-  DEVICE: KD7
-  DT_LINK: https://github.com/mastersenpai0405/recovery_device_tecno_KD7
-  DT_PATH: device/tecno/KD7
-  TARGET: recoveryimage
-  TZ: Asia/manila
+  MANIFEST: https://github.com/minimal-manifest-twrp/platform_manifest_twrp_aosp.git -b twrp-12.1
+  DEVICE: Infinix-X6817
+  DT_LINK: https://github.com/bibi09456/android_device_infinix_X6817-twrp
+  DT_PATH: device/infinix/Infinix-X6817
+  TARGET: bootimage
+  TZ: Africa/morocco
 
 jobs:
   build:
@@ -57,12 +57,12 @@ jobs:
               cd work
               . build/envsetup.sh &&lunch omni_$DEVICE-eng &&export ALLOW_MISSING_DEPENDENCIES=true && mka $TARGET
              
-       - name: Release recovery image
+       - name: Release boot image
          uses: softprops/action-gh-release@v1
          env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
          with:
-          tag_name: TWRP_10.0
-          name: TWRP-KD7
+          tag_name: TWRP_12.1
+          name: TWRP-X6817
           files: | 
-            work/out/target/product/KD7/recovery.img
+            work/out/target/product/X6817/boot.img
