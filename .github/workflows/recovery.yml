@@ -14,9 +14,9 @@ on:
 
 env:
   MANIFEST: https://github.com/minimal-manifest-twrp/platform_manifest_twrp_omni -b twrp-10.0-deprecated
-  DEVICE: KD7
-  DT_LINK: https://github.com/mastersenpai0405/recovery_device_tecno_KD7
-  DT_PATH: device/tecno/KD7
+  DEVICE: emerald
+  DT_LINK: https://github.com/twrpdtgen/android_device_xiaomi_emerald/tree/emerald-user-12-TP1A.220624.014-V14.0.4.0.TNFIDXM-release-keys/recovery/root
+  DT_PATH: device/xiaomi/emerald
   TARGET: recoveryimage
   TZ: Asia/manila
 
@@ -63,6 +63,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
          with:
           tag_name: TWRP_10.0
-          name: TWRP-KD7
-          files: | 
-            work/out/target/product/KD7/recovery.img
+          name: TWRP-note13pro(4g)
+          files: https://github.com/twrpdtgen/android_device_xiaomi_emerald/blob/emerald-user-12-TP1A.220624.014-V14.0.4.0.TNFIDXM-release-keys/recovery/root/miui.factoryreset.rc
+            
