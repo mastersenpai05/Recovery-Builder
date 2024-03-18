@@ -14,7 +14,7 @@ on:
 
 env:
   MANIFEST: https://github.com/minimal-manifest-twrp/platform_manifest_twrp_omni -b twrp-10.0-deprecated
-  DEVICE: KD7
+  DEVICE: X6837
   DT_LINK: https://github.com/mastersenpai0405/recovery_device_tecno_KD7
   DT_PATH: device/tecno/KD7
   TARGET: recoveryimage
