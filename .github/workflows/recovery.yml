@@ -13,11 +13,11 @@ on:
   workflow_dispatch:
 
 env:
-  MANIFEST: https://github.com/minimal-manifest-twrp/platform_manifest_twrp_omni -b twrp-12.0-deprecated
+  MANIFEST: https://github.com/minimal-manifest-twrp/platform_manifest_twrp_omni -b twrp-12.1-deprecated
   DEVICE: LF7
   DT_LINK: https://github.com/T0UB3S/android_device_tecno_TECNO-LF7
   DT_PATH: device/tecno/TECNO-LF7
-  TARGET: recoveryimage
+  TARGET: bootimage
   TZ: America/venezuela
 
 jobs:
@@ -57,12 +57,12 @@ jobs:
               cd work
               . build/envsetup.sh &&lunch omni_$DEVICE-eng &&export ALLOW_MISSING_DEPENDENCIES=true && mka $TARGET
              
-       - name: Release recovery image
+       - name: Release boot image
          uses: softprops/action-gh-release@v1
          env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
          with:
-          tag_name: TWRP_12.0
+          tag_name: TWRP_12.1
           name: TWRP-LF7
           files: | 
-            work/out/target/product/LF7/recovery.img
+            work/out/target/product/LF7/boot.img
